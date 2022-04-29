@@ -2,7 +2,7 @@
 <style>
     body, html
     {
-        height: 100%;
+        height: 150%;
         width: 100%;
         margin: 0;
         font-family: 'Trebuchet MS';
@@ -23,18 +23,49 @@
     }
     .photo
     {
-        width: 100px;
-        margin-top: 5px;
-        margin-left: 6%;
-        margin-bottom: 5px;
-        position: static;
-        float: left;
+      width: 100%;
+      outline: 3px solid #000000;
     }
     .opa
     {
         border-bottom: 5px solid #000000;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .opa2
+    {
         margin-left: 5%;
         margin-right: 5%;
+        display: block;
+    }
+    .opa3
+    {
+      display: inline-block;
+      width: 30%;
+      margin-bottom: 20px;
+    }
+    .opa4
+    {
+      display: inline-block;
+      width: 67%;
+      float: right;
+    }
+    a
+    {
+        text-decoration: none;
+        color: #0f7afc;
+        border-bottom: 1px solid;
+        border-bottom-color: rgba(15, 122, 252, 0.2);
+    }
+    a:hover
+    {
+        text-decoration: none;
+        color: #a8edea;
+        border-bottom-color: #a8edea;
+    }
+    h3
+    {
+        margin-bottom: -12px;
     }
    </style>
 
@@ -50,13 +81,35 @@
         <img class="logo" src="img/logo.png">
         <div class="list">
             <div class="opa">
-                <h3 align="center">Писарев Дмитрий Ильич</h3>
+                <h3 align="center"><br>Писарев Дмитрий Ильич</h3>
                 <p>Разработчик лабораторных работ</p>
                 <p></p>
             </div>
+            <h4 align="center">Немного о себе</h4>
             <div class="opa">
-                <h4 align="center">Немного о себе</h4>
-                <p><img class="photo"src="img/photo1.jpg" hspace="10px">opa opa</p>
+                <div class="opa3"><img class="photo" src="img/photo1.jpg"></div>
+                <div class="opa4"><p align="justify">&nbsp&nbsp&nbsp&nbspОбучаюсь на 3-ем курсе университета, изучаю HTML, CSS, JavaScript, PHP, MySQL. Знаю C, C++, C#. Немного работал с библиотеками ImGUI на lua. Ответственен, терпелив и усидчив.</p></div>
+            </div>
+            <div class="opa">
+                <h4 align="center">Портфолио</h4>
+                <p>Скоро тут будут проекты</p>
+            </div>
+            <div class="opa">
+                <h4 align="center">Образование</h4>
+                <p>&#8226 Уровень образования: неоконченное высшее</p>
+                <p align="justify">&#8226 ВУЗ: Московский Государственный Технологический Университет "СТАНКИН". Институт Цифровых и Интеллектуальных Систем. Кафедра Компьютерных Систем Управления. Автоматизация технологических процессов и производств.</p>
+            </div>
+            <div class="opa">
+                <h4 align="center">Опыт работы</h4>
+                <p>&#8226 -</p>
+            </div>
+            <div class="opa2">
+                <h4 align="center">Контакты</h4>
+                <p>&#8226 <a href="https://github.com/DIPIRIDAMOLE">GitHub</a></p>
+                <p>&#8226 <a href="https://gitlab.com/DIPIRIDAMOLE">GitLub</a></p>
+                <p>&#8226 <a href="https://t.me/dipiridamole">Telegram</a></p>
+                <p>&#8226 <a href="mailto:dmitry_pisarev@vk.com">Почта</a></p>
+                <p>&#8226 Телефон: +7-(964)-775-01-92<br>&nbsp</p>
             </div>
         </div>
     </body>
