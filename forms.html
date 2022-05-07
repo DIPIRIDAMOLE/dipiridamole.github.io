@@ -7,31 +7,50 @@
         <title>DIPIRIDAMOLE</title>
     </head>
     <body>
-        <img class="logo" src="img/logo.png">
+        <a href="index.html"><img class="logo" src="img/logo.png"></a>
         <div></div>
         <div class="listA4">
             <div class="otst">
-                <h3>Заполните формы</h3>
+                <h3 align="center">Заполните формы</h3>
                 <form method="GET" name="filter" action="indhard.html">
-                    <label for="inp_1">Группа:</label>
-                    <input type="text" name="group" id="inp_1"><br>
-
-                    <label for="inp_2">ФИО студента:</label>
-                    <input type="text" name="fios" id="inp_2"><br>
-
-                    <label for="inp_3">ФИО преподавателя:</label>
-                    <input type="text" name="fiop" id="inp_3"><br>
-
-                    <label for="inp_4">Ученая степень преподавателя:</label>
-                    <input type="text" name="lvl" id="inp_4"><br>
-
-                    <label for="inp_5">Тема лабораторной работы:</label>
-                    <input type="text" name="theme" id="inp_5"><br>
-
-                    <label for="inp_6">Кафедра:</label>
-                    <input type="text" name="kaf" id="inp_6"><br>
-                    <input type="submit" value="Сгенерировать">
-                </form>
+                    <ul class="wrapper">
+                      <li class="form-row">
+                        <label for="inp_1">Группа:</label>
+                    <input type="text" name="group" id="inp_1">
+                      </li>
+                      <li class="form-row">
+                        <label for="inp_2">ФИО студента:</label>
+                    <input type="text" name="fios" id="inp_2">
+                      </li>
+                      <li class="form-row">
+                        <label for="inp_3">ФИО преподавателя:</label>
+                    <input type="text" name="fiop" id="inp_3">
+                      </li>
+                      <li class="form-row">
+                        <label for="inp_4">Ученая степень преподавателя:</label>
+                    <input type="text" name="lvl" id="inp_4">
+                    </li>
+                    <li class="form-row">
+                        <label for="inp_5">Тема лабораторной работы:</label>
+                    <input type="text" name="theme" id="inp_5">
+                    </li>
+                    <li class="form-row">
+                        <label for="inp_6">Кафедра:</label>
+                    <input type="text" name="kaf" id="inp_6">
+                    </li>
+                    <li class="form-row">
+                        <label for="inp_7">Дисциплина:</label>
+                    <input type="text" name="disc" id="inp_7">
+                    </li>
+                    <li class="form-row">
+                        <label for="inp_8">Номер лабораторной работы:</label>
+                    <input type="text" name="number" id="inp_8">
+                    </li>
+                      <li class="form-row">
+                        <button type="submit">Сгенерировать титульный лист</button>
+                      </li>
+                    </ul>
+                  </form>
             </div>               
         </div>
     </body>
@@ -78,4 +97,35 @@
         font-size: 14pt;
         text-align: center;
     }
-</style>
+    .wrapper
+    {
+        background-color: #ffffff;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 3px;
+    }
+    .form-row
+    {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+    }
+    .form-row > label
+    {
+        padding: .5em 1em .5em 0;
+    }
+    .form-row > input
+    {
+        flex: 1;
+    }
+    .form-row > input, .form-row > button
+    {
+        padding: .5em;
+    }
+    .form-row > button
+    {
+        background: gray;
+        color: white;
+        border: 0;
+    }
+    </style>

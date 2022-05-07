@@ -7,7 +7,7 @@
         <title>DIPIRIDAMOLE</title>
     </head>
     <body>
-        <img class="logo" src="img/logo.png">
+        <a href="index.html"><img class="logo" src="img/logo.png"></a>
         <div></div>
         <div class="listA4">
             <div class="otst">
@@ -16,28 +16,86 @@
                     федеральное государственное бюджетное образовательное учреждение<br>
                     высшего образования<br>
                      «Московский государственный технологический университет «СТАНКИН»<br>
-                    (ФГБОУ ВО «МГТУ «СТАНКИН»)
+                    (ФГБОУ ВО «МГТУ «СТАНКИН»)<br>
+                    ________________________________________________________________
                     </h1>
-                    <p>.. скоро будет</p>
+                    <p id="kaf"></p>
+                        <br><br><br><br>
+                    <p id="disc"></p>
+                    <h1 id="number"></h1>
+                    <h1 id="theme"></h1>
+                    <br><br><br><br>
+                    <table>
+                        <tr>
+                            <td>Выполнил:</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td id="group"></td>
+                            <td>_________</td>
+                            <td>&nbsp</td>
+                            <td>_________</td>
+                            <td id="fios"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td>(дата)</td>
+                            <td>&nbsp</td>
+                            <td>(подпись)</td>
+                            <td>&nbsp</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>Принял:</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td id="lvl"></td>
+                            <td>_________</td>
+                            <td>&nbsp</td>
+                            <td>_________</td>
+                            <td id="fiop"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td>(дата)</td>
+                            <td>&nbsp</td>
+                            <td>(подпись)</td>
+                            <td>&nbsp</td>
+                        </tr>
+                    </table>
+                    <br><br><br><br>
+                    <h1>Москва 2022</h1>
             </div>               
         </div>
     </body>
 </html>
 
 <script>
-    var group = getUrlVars()["group"];
-    var fios = getUrlVars()["fios"];
-    var fiop = getUrlVars()["fiop"];
-    var lvl = getUrlVars()["lvl"];
-    var theme = getUrlVars()["theme"];
-    var kaf = getUrlVars()["kaf"];
-
-    alert(group);
-    alert(fios);
-    alert(fiop);
-    alert(lvl);
-    alert(theme);
-    alert(kaf);
+    var group = decodeURI(getUrlVars()["group"]).replace(/\+/g, " ");
+    var fios = decodeURI(getUrlVars()["fios"]).replace(/\+/g, " ");
+    var fiop = decodeURI(getUrlVars()["fiop"]).replace(/\+/g, " ");
+    var lvl = decodeURI(getUrlVars()["lvl"]).replace(/\+/g, " ");
+    var theme = decodeURI(getUrlVars()["theme"]).replace(/\+/g, " ");
+    var kaf = decodeURI(getUrlVars()["kaf"]).replace(/\+/g, " ");
+    var disc = decodeURI(getUrlVars()["disc"]).replace(/\+/g, " ");
+    var number = decodeURI(getUrlVars()["number"]).replace(/\+/g, " ");
+    
+    document.getElementById("kaf").innerHTML = "Институт цифровых интеллектуальных систем<br>" + kaf;
+    document.getElementById("theme").innerHTML = theme;
+    document.getElementById("group").innerHTML = "Студент гр. " + group;
+    document.getElementById("fios").innerHTML = fios;
+    document.getElementById("fiop").innerHTML = fiop;
+    document.getElementById("lvl").innerHTML = lvl;
+    document.getElementById("disc").innerHTML = "Образовательная программа 15.03.04<br>«Автоматизация технологических процессов и производств»<br><br>Дисциплина «" + disc + "»<br>";
+    document.getElementById("number").innerHTML = "Отчет<br>по лабораторной работе " + number;
 
     function getUrlVars()
     {
@@ -85,9 +143,19 @@
         padding-left: 30mm;
         padding-right: 10mm;
     }
-    h1
+    h1, p
     {
         font-size: 14pt;
         text-align: center;
+    }
+    .left
+    {
+        font-size: 14pt;
+        text-align: left;
+    }
+    table
+    {
+        width: 100%;
+        font-size: 14pt;
     }
 </style>
