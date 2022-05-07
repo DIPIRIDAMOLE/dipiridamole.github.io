@@ -72,21 +72,22 @@
                         </tr>
                     </table>
                     <br><br><br><br>
-                    <h1>Москва 2022</h1>
+                    <h1 id="msk"></h1>
             </div>               
         </div>
     </body>
 </html>
 
 <script>
-    var group = decodeURI(getUrlVars()["group"]).replace(/\+/g, " ");
-    var fios = decodeURI(getUrlVars()["fios"]).replace(/\+/g, " ");
-    var fiop = decodeURI(getUrlVars()["fiop"]).replace(/\+/g, " ");
-    var lvl = decodeURI(getUrlVars()["lvl"]).replace(/\+/g, " ");
-    var theme = decodeURI(getUrlVars()["theme"]).replace(/\+/g, " ");
-    var kaf = decodeURI(getUrlVars()["kaf"]).replace(/\+/g, " ");
-    var disc = decodeURI(getUrlVars()["disc"]).replace(/\+/g, " ");
-    var number = decodeURI(getUrlVars()["number"]).replace(/\+/g, " ");
+    var
+    group = decode(getUrlVars()["group"]),
+    fios = decode(getUrlVars()["fios"]),
+    fiop = decode(getUrlVars()["fiop"]),
+    lvl = decode(getUrlVars()["lvl"]),
+    theme = decode(getUrlVars()["theme"]),
+    kaf = decode(getUrlVars()["kaf"]),
+    disc = decode(getUrlVars()["disc"]),
+    number = decode(getUrlVars()["number"]);
     
     document.getElementById("kaf").innerHTML = "Институт цифровых интеллектуальных систем<br>" + kaf;
     document.getElementById("theme").innerHTML = theme;
@@ -96,6 +97,7 @@
     document.getElementById("lvl").innerHTML = lvl;
     document.getElementById("disc").innerHTML = "Образовательная программа 15.03.04<br>«Автоматизация технологических процессов и производств»<br><br>Дисциплина «" + disc + "»<br>";
     document.getElementById("number").innerHTML = "Отчет<br>по лабораторной работе " + number;
+    document.getElementById("msk").innerHTML = "Москва " + new Date().getFullYear();
 
     function getUrlVars()
     {
@@ -104,6 +106,11 @@
         vars[key] = value;
         });
         return vars;
+    }
+
+    function decode(str)
+    {
+        return decodeURI(str).replace(/\+/g, " ").replace(/\%2C/g, ",").replace(/\%3A/g, ":").replace(/\%3B/g, ";").replace(/\%40/g, "@").replace(/\%23/g, "#").replace(/\%24/g, "$").replace(/\%26/g, "&");
     }
 </script>
 
