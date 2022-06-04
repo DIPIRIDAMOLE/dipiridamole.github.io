@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="img/icon.png" type="image/png">
+        <title>DIPIRIDAMOLE</title>
+    </head>
+    <body>
+        <a href="index.html"><img class="logo" src="img/logo.png"></a>
+        <div></div>
+        <div class="listA4">
+            <div class="otst">
+                <ul class="wrapper">
+                    <li class="form-row">
+                      <label for="num1">Число 1:</label>
+                  <input type="number" id="num1">
+                    </li>
+                    <li class="form-row">
+                      <label for="num2">Число 2:</label>
+                  <input type="number" id="num2">
+                    </li>
+                    <h3 align="center" id="res"></h3>
+                    <li class="form-row">
+                        <button onclick="result()">Считать</button>
+                      </li>
+                </ul>
+                
+            </div>               
+        </div>
+    </body>
+</html>
+
+<script>
+    function result()
+    {
+        document.getElementById("res").innerHTML = Number(document.getElementById("num1").value) + Number(document.getElementById("num2").value);
+    }
+    </script>
+
+<style>
+    body, html
+    {
+        min-height: 150%;
+        width: 100%;
+        margin: 0;
+        font-family: 'Times New Roman';
+        background: linear-gradient(45deg, #ccfffc, #ffe4e4);
+    }
+    .listA4
+    {
+        background: rgb(255, 255, 255);
+        height:297mm;
+        width:210mm;
+        box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        margin: auto;
+    }
+    .logo
+    {
+        width: 15%;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .stankin
+    {
+        width:41mm;
+        display: block;
+        margin: 0 auto;
+    }
+    .otst
+    {
+        padding-top: 20mm;
+        padding-bottom: 20mm;
+        padding-left: 30mm;
+        padding-right: 10mm;
+    }
+    h1
+    {
+        font-size: 14pt;
+        text-align: center;
+    }
+    .wrapper
+    {
+        background-color: #ffffff;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 3px;
+    }
+    .form-row
+    {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+    }
+    .form-row > label
+    {
+        padding: .5em 1em .5em 0;
+    }
+    .form-row > input
+    {
+        flex: 1;
+    }
+    .form-row > input, .form-row > button
+    {
+        padding: .5em;
+    }
+    .form-row > button
+    {
+        background: gray;
+        color: white;
+        border: 0;
+    }
+    </style>
